@@ -16,7 +16,7 @@ public class dynamicProgrammingIII {
         M[0] = array[0];
         int max = array[0];
         for (int i = 1; i < array.length; i++) {
-            M[i] = Math.max(M[i-1] + array[i], M[i]);
+            M[i] = Math.max(M[i-1] + array[i], array[i]);
             max = Math.max(M[i], max);
         }
         return max;
