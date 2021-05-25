@@ -1,4 +1,4 @@
-package DynamicProgramming.DynamicProgrammingI;
+package src.DynamicProgramming.DynamicProgrammingI;
 
 import java.util.Set;
 

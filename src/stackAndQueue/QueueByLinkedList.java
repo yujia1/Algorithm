@@ -1,5 +1,5 @@
 package stackAndQueue;
-import LiskedList.ListNode;
+import src.LiskedList.ListNode;
 public class QueueByLinkedList {
     private ListNode head;
     private ListNode tail;

@@ -1,5 +1,5 @@
 package tree;
-import binaryTree.TreeNode;
+import src.binaryTree.TreeNode;
 
 public class sortArrayToBST {
     public static TreeNode sortedArrayToBST(int[] num) {
