@@ -1,4 +1,4 @@
-package finalTest;
+package src.finalTest;
 import java.util.*;
 public class finalTest {
     public static List<String> subset(String input){

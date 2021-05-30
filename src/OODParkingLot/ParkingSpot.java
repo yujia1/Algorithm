@@ -1,4 +1,4 @@
-package OODParkingLot;
+package src.OODParkingLot;
 
 class ParkingSpot {
     private final VehicleSize size;

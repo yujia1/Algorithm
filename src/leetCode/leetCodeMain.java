@@ -1,4 +1,5 @@
 package leetCode;
+
 import java.util.*;
 public class leetCodeMain {
     public static List<Integer> countSmaller(int[] nums) {

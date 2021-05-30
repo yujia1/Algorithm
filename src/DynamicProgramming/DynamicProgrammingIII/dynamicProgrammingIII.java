@@ -1,4 +1,4 @@
-package DynamicProgramming.DynamicProgrammingIII;
+package src.DynamicProgramming.DynamicProgrammingIII;
 import java.util.*;
 public class dynamicProgrammingIII {
     //TODO

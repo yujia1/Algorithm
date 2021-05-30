@@ -1,10 +1,9 @@
-package sortAlgorithm;
+package src.sortAlgorithm;
 
-import javax.print.attribute.standard.PrinterMakeAndModel;
 import java.util.Arrays;
 import java.util.Random;
 
-import LiskedList.ListNode;
+import src.LiskedList.ListNode;
 
 public class sortAlgorithm {
     public static Random random = new Random();

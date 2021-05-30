@@ -1,6 +1,6 @@
-package BloombergInterview;
+package src.BloombergInterview;
 
-import binaryTree.TreeNode;
+import src.binaryTree.TreeNode;
 
 public class interview {
     /**

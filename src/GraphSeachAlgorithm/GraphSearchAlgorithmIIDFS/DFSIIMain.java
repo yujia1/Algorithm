@@ -44,18 +44,34 @@ public class DFSIIMain {
         helper4(input,0,sb,list);
         return list;
     }
+    //method 1
+//    private static void helper4(char[] set, int index, StringBuilder sb, List<String> list) {
+//        if (index == set.length) {
+//            list.add(sb.toString());
+//            return;
+//        }
+//        sb.append(set[index]);
+//        helper4(set, index + 1, sb, list);
+//        sb.deleteCharAt(sb.length() - 1);
+//        while (index < set.length-1 && set[index] == set[index+1]) {
+//            index++;
+//        }
+//        helper4(set, index + 1, sb, list);
+//    }
+    //method 2
     private static void helper4(char[] set, int index, StringBuilder sb, List<String> list) {
-        if (index == set.length) {
-            list.add(sb.toString());
+        if (index > set.length) {
             return;
         }
-        sb.append(set[index]);
-        helper4(set, index + 1, sb, list);
-        sb.deleteCharAt(sb.length() - 1);
-        while (index < set.length-1 && set[index] == set[index+1]) {
-            index++;
+        list.add(sb.toString());
+        for (int i = index; i < set.length; i++) {
+            if (i > index && set[i] == set[i -1]) {
+                continue;
+            }
+            sb.append(set[i]);
+            helper4(set, i + 1, sb, list);
+            sb.deleteCharAt(sb.length() - 1);
         }
-        helper4(set, index + 1, sb, list);
     }
     //TODO
     // Q1.5 given an array of size n with duplicate, print all possible combination of k elements
@@ -82,6 +98,7 @@ public class DFSIIMain {
         }
         helper5(set, sb, index + 1, res, k);
     }
+
 
 
     //TODO
@@ -306,11 +323,11 @@ public class DFSIIMain {
 //       }
         //TODO Q1.4 test
 
-//        String str = "abb";
-//        List<String> res = subsetDup(str);
-//        for (String st: res) {
-//            System.out.println(st);
-//        }
+        String str = "abb";
+        List<String> res = subsetDup(str);
+        for (String st: res) {
+            System.out.println(st);
+        }
         //TODO Q1.5 test
 //        String str = "12223";
 //        List<String> res = subsetDupKth(str,3);

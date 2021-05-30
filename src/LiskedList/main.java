@@ -1,7 +1,4 @@
-package LiskedList;
-
-import java.lang.reflect.Array;
-import java.util.*;
+package src.LiskedList;
 
 public class main {
     public static void print(ListNode head){

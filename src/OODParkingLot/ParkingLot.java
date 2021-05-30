@@ -1,4 +1,4 @@
-package OODParkingLot;
+package src.OODParkingLot;
 // class level 层面只有public 或者default
 public class ParkingLot {
     //TODO

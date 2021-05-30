@@ -30,7 +30,6 @@ public class onlineTest {
         int[][] jobs = new int[startTime.length][3];
         for (int i = 0; i < startTime.length; i++) {
 
-
             jobs[i] = new int[]{startTime[i], endTime[i], profit[i]};
         }
         Arrays.sort(jobs, (a,b) -> a[1] - b[1]);

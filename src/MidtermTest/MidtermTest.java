@@ -1,4 +1,4 @@
-package MidtermTest;
+package src.MidtermTest;
 
 public class MidtermTest {
 

@@ -1,6 +1,9 @@
 package DynamicProgramming.DynamicProgrammingIV;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.Queue;
+
 /**
  * laioffer
  * questions
@@ -198,6 +201,7 @@ public class DynamicProgrammingIV {
         }
         return dp[0][array.length-1];
     }
+
     public static void main(String[] args) {
         //test Q1.2
         int[] arr = new int[]{7,2,3,1,5,8,9,6};

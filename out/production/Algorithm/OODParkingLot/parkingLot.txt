@@ -1,0 +1,36 @@
+step1. Analyze the functionality and its use case
+
+For API, ask: input, output
+
+One level or multiple levels?
+Parking spot/ vehicle size?
+Track the location of each vehicle?
+
+Step2. Classes and relationships
+Data- classes and member fields
+Action- methods
+(Single-responsibility principle)
+
+Vehicle, Parking Spot, level, parkingLot
+
+
+Step3. For complicated designs, first focus on public methods(APIs):
+
+1. Basic functionality: given vehicle, tell whether there is available spot
+2. Possible extensions: provide available spot locations, assign spot to the vehicle
+
+ParkingLot:
+Data: Level[] levels
+Method: hasSpot(v), park(v), leave(v);
+
+
+Level:
+Data: List<spot> list
+Method:hasSpot(v), park(v), leave(v);
+
+Spot:
+Data: vehicleSize, Vehicle;
+Method: fit, park(v), leave(), getVehicle;
+
+VehicleSize: enum 1,2
+Vehicle: getsize();

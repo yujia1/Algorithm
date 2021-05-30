@@ -1,14 +1,14 @@
 package GraphSeachAlgorithm.GraphSearchAlgorithmBFS;
 
-import binaryTree.TreeNode;
-
+import src.binaryTree.TreeNode;
 import java.util.*;
 
 /**
  * breadth-first- search BFS1 -> apply to same level node interaction
  * Best-first-search BFS2-> apply to problem to find short way and relationship between different level node
  */
-public class BFS {
+public class
+BFS {
     //TODO this is heap and graph
 
     // use queue to poll every and

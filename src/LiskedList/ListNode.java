@@ -1,4 +1,4 @@
-package LiskedList;
+package src.LiskedList;
 
 public class ListNode {
     public int value;

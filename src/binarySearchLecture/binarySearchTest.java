@@ -1,4 +1,4 @@
-package binarySearchLecture;
+package src.binarySearchLecture;
 
 public class binarySearchTest {
     /**

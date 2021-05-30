@@ -1,4 +1,4 @@
-package OODParkingLot;
+package src.OODParkingLot;
 
 public enum VehicleSize {
     Compact(1),

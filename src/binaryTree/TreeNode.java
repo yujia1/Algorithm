@@ -1,8 +1,5 @@
-package binaryTree;
+package src.binaryTree;
 
-import com.sun.source.tree.Tree;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
