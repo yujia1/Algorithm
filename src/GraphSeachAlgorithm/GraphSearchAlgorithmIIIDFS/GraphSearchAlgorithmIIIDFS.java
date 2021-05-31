@@ -1,4 +1,4 @@
-package src.GraphSeachAlgorithm.GraphSearchAlgorithmIIIDFS;
+package GraphSeachAlgorithm.GraphSearchAlgorithmIIIDFS;
 
 import java.util.*;
 //https://docs.google.com/document/d/1r9PiZRMGYPTLX10fczPX2I9aGEsTCMmgmLOuOsjsLaM/edit#

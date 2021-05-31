@@ -1,4 +1,4 @@
-package src.bitOperation;
+package bitOperation;
 
 public class BitOperationAndRepresentation {
     //第一遍 intelj

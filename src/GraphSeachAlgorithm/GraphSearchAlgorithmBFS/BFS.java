@@ -1,6 +1,6 @@
 package GraphSeachAlgorithm.GraphSearchAlgorithmBFS;
 
-import src.binaryTree.TreeNode;
+import binaryTree.TreeNode;
 import java.util.*;
 
 /**
@@ -227,7 +227,6 @@ BFS {
             }
         });
         //step 1 , sum up all a1 and a2 element
-
         int[] res = new int[array1.length * array2.length];
         int n = 0 ;
         for (int i = 0; i < array1.length; i ++) {

@@ -1,5 +1,5 @@
 package tree;
-import src.binaryTree.TreeNode;
+import binaryTree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Deque;
