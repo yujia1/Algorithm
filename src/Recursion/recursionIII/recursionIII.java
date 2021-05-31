@@ -1,5 +1,6 @@
 package Recursion.recursionIII;
 
+
 import binaryTree.TreeNode;
 
 import java.util.ArrayList;
@@ -174,6 +175,63 @@ public class recursionIII {
         return false;
     }
 
+    /**
+     * Q2.3
+     * laioffer:https://app.laicode.io/app/problem/140
+     * Given a binary tree in which each node contains an integer number.
+     * Find the maximum possible subpath sum(both the starting and ending node of the subpath should be on the same path
+     * from root to one of the leaf nodes, and the subpath is allowed to contain only one node).
+     * @param root
+     * @return
+     * O(n)
+     */
+    public int maxPathSumNodeToNodeFromRootTOLeaf(TreeNode root) {
+        int[] max = new int[]{Integer.MIN_VALUE};
+        helperMaxPathSumNodeToNode(root, max);
+        return max[0];
+    }
+    private int helperMaxPathSumNodeToNode(TreeNode root, int[] max) {
+        if (root == null) return 0;
+        int left = helperMaxPathSumNodeToNode(root.left, max);
+        int right = helperMaxPathSumNodeToNode(root.right, max);
+        int sin = Math.max(Math.max(left, right), 0) + root.value;
+        max[0] = Math.max(max[0], sin);
+        return sin;
+    }
+
+
+    //TODO
+    /**
+     * Q3 Tree + Recursion: Tree serialization problems
+     * Q3.2
+     * leetcode: https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
+     * @param root
+     * @return
+     */
+    public TreeNode flatten(TreeNode root) {
+       return null;
+    }
+
+    /**
+     * Q4 Tree + Recursion: Tree de-serialization problems
+     * @param inOrder
+     * @param preOrder
+     * laioffer:https://app.laicode.io/app/problem/213
+     * @return
+     */
+    public TreeNode reconstructI(int[] inOrder, int[] preOrder) {
+        // Write your solution here
+        return null;
+    }
+
+    public TreeNode reconstructII(int[] post) {
+        // Write your solution here
+        return null;
+    }
+    public TreeNode reconstructIII(int[] inOrder, int[] levelOrder) {
+        // Write your solution here
+        return null;
+    }
 
     public static void main(String[] args) {
 

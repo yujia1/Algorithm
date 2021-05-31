@@ -1,4 +1,4 @@
-package src.LiskedList;
+package LiskedList;
 
 public class main {
     public static void print(ListNode head){
