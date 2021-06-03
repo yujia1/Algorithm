@@ -61,22 +61,3 @@ LongestCommonSubString(2D) with condition that letters are consecutive;
 LongestCommonSubSequence(2D) with condition that letters are not necessarily consecutive;
 
 OptimalGame(pick pizza): 填表
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

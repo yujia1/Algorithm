@@ -3,6 +3,9 @@ package GraphSeachAlgorithm.GraphSearchAlgorithmBFS;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * BFS 是一层一层的traverse，DFS是一步步深入到edges，然后返回上一层继续深入
+ */
 public class LeetCodeBFS {
     /**
      * Q1

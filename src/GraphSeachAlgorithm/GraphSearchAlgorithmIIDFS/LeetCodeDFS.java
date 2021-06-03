@@ -396,6 +396,7 @@ public class LeetCodeDFS {
     }
 
     /**
+     * Q10
      * daddy of DFS
      * N-queens
      * leetcode: https://leetcode.com/problems/n-queens/
@@ -446,6 +447,7 @@ public class LeetCodeDFS {
     // 第二类graph search  dfs
 
     /**
+     * Q11
      * Number of Connected Components in an Undirected Graph
      * leetcode:https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/
      * @param n
@@ -482,6 +484,7 @@ public class LeetCodeDFS {
     }
 
     /**
+     * Q12
      * course schedule
      * @param numCourses
      * @param prerequisites
@@ -510,6 +513,7 @@ public class LeetCodeDFS {
         return true;
     }
     private boolean dfsCourse(HashMap<Integer, ArrayList<Integer>> map, int[] visited, int i) {
+        // 0 is never visited, 1 is current visited , -1 visiting
         if (visited[i] == -1) return false; // its current dfs cycle
         if (visited[i] == 1) return true; // separate dfs visited
         visited[i] = -1;
@@ -525,6 +529,7 @@ public class LeetCodeDFS {
     }
 
     /**
+     * Q13
      * bipartition problems to spilt dislike people into two group
      * @param n
      * @param dislikes
@@ -567,6 +572,54 @@ public class LeetCodeDFS {
         return true;
     }
 
+    /**
+     * find minimum height of trees
+     * think it as a tissue, find the spot where the distance to edges are farthest
+     * @param n
+     * @param edges
+     * @return
+     */
+    public List<Integer> findMinHeightTrees(int n, int[][] edges) {
+        if (n == 1) return Collections.singletonList(0);
+        //set up the adjacency list
+        List<Set<Integer>> graph  = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            graph.add(new HashSet<>());
+        }
+        // construct graph node
+        for (int[] edge: edges) {
+            graph.get(edge[0]).add(edge[1]);
+            graph.get(edge[1]).add(edge[0]);
+        }
+        //keep track of all leaves( nodes on the edge of the graph with only one nei)
+        List<Integer> leaves = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            if (graph.get(i).size() == 1) {
+                leaves.add(i);
+            }
+        }
+        //keep removing leaves until there's at most 2 nodes left on the graph
+        while ( n > 2) {
+            // update the total number of nodes in the graph, after we remove the leaves
+            n -= leaves.size();
+            // temporary array to hold the new leaf
+            List<Integer> newLeaves = new ArrayList<>();
+            //remove each of current leaves
+            for (int i : leaves) {
+                //get this leaf's one and only nei
+                int j = graph.get(i).iterator().next();
+                // go to this leaf's nei and remove this leaf from this list
+                graph.get(j).remove(i);
+                // if that nei only has one nei left, it's a leaf now
+                if (graph.get(j).size() == 1) {
+                    newLeaves.add(j);
+                }
+            }
+            leaves = newLeaves;
+        }
+        return leaves;
+    }
+
     public static void main(String[] args) {
         LeetCodeDFS test = new LeetCodeDFS();
         int[] nums = new int[] {1, 2, 3};
@@ -579,12 +632,17 @@ public class LeetCodeDFS {
 //            System.out.println();
 //        }
         //Q2.1 test
-        List<List<Integer>> res2 = test.permute(nums);
-        for (List<Integer> list: res2) {
-            for (int num: list) {
-                System.out.print( num + " ");
-            }
-            System.out.println();
+//        List<List<Integer>> res2 = test.permute(nums);
+//        for (List<Integer> list: res2) {
+//            for (int num: list) {
+//                System.out.print( num + " ");
+//            }
+//            System.out.println();
+//        }
+        List<Integer> list = new ArrayList<>();
+        for (int i : nums) {
+            list.add(i);
         }
-    }
+        System.out.println("num is "+ list.iterator().next());
+   }
 }

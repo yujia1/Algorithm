@@ -1,9 +1,11 @@
 package src.sortAlgorithm;
 
+import LiskedList.ListNode;
+
 import java.util.Arrays;
 import java.util.Random;
 
-import src.LiskedList.ListNode;
+
 
 public class sortAlgorithm {
     public static Random random = new Random();
