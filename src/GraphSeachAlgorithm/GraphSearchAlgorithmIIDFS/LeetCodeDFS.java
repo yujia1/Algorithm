@@ -639,10 +639,6 @@ public class LeetCodeDFS {
 //            }
 //            System.out.println();
 //        }
-        List<Integer> list = new ArrayList<>();
-        for (int i : nums) {
-            list.add(i);
-        }
-        System.out.println("num is "+ list.iterator().next());
+
    }
 }

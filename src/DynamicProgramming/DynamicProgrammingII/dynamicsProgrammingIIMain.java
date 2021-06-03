@@ -1,4 +1,4 @@
-package src.DynamicProgramming.DynamicProgrammingII;
+package DynamicProgramming.DynamicProgrammingII;
 
 public class dynamicsProgrammingIIMain {
     //TODO
