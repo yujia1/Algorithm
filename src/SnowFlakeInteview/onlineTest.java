@@ -1,10 +1,24 @@
 package SnowFlakeInteview;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class onlineTest {
+    // find how many unique pairs equals to target
+    public int uniquePars(int[] nums, int target) {
+        Set<Integer> set = new HashSet<>();
+        Set<Integer> seen = new HashSet<>();
+        int count = 0;
+        for (int num: nums) {
+            if (set.contains(target - num) && !seen.contains(num)){
+                count++;
+                seen.add(target - num);
+                seen.add(num);
+            } else if (!set.contains(num)) {
+                set.add(num);
+            }
+        }
+        return count;
+    }
     /**
      * give an array and int k, then find all unique pairs in arrays to meet requirement int[] {a, b}, a + k = b or b + k = a
      * */
