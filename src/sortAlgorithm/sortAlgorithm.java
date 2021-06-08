@@ -272,7 +272,7 @@ public class sortAlgorithm {
      * merge sort
      * time complexity: split: O(n);  merge O(n) * O(log n) = O(n log n)
      * space complexity: stack(log n), heap( n): max O(n), but we assumed that GC happens on time
-     * @param args arr
+     * @param arr
      */
     public static int[] mergeSort(int[] arr) {
         // corner case
