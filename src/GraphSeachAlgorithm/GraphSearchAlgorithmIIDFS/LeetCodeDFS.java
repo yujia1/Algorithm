@@ -8,6 +8,8 @@ public class LeetCodeDFS {
      * without dups
      * @param nums
      * @return
+     * TC：O(2^N * N)
+     * SC: O(N)
      */
     public List<List<Integer>> subsets(int[] nums){
         List<List<Integer>> res = new ArrayList<>();
@@ -49,7 +51,7 @@ public class LeetCodeDFS {
         }
         res.add(new ArrayList<>(cur));
         for (int i = index; i < nums.length; i++) {
-            if (i > index && nums[i] == nums[i-1]) continue;
+            if (i > index && nums[i] == nums[i-1]) continue; // i must be bigger than current index, 这样就在同一个loop里的下一个数字
             cur.add(nums[i]);
             dfsSubsetsWithDup(nums, res, cur, i + 1);
             cur.remove(cur.size() - 1);
@@ -61,6 +63,8 @@ public class LeetCodeDFS {
      * https://leetcode.com/problems/permutations
      * @param nums
      * @return
+     * TC:(N! *N)
+     * SC: O(N)
      */
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
@@ -509,6 +513,8 @@ public class LeetCodeDFS {
      * @param numCourses
      * @param prerequisites
      * @return
+     * Time Complexity: {O}(|E| + |V| ^ 2) where ∣E∣ is the number of dependencies, ∣V∣ is the number of courses
+     * Space Complexity: {O}(|E| + |V|)O(∣E∣+∣V∣)
      */
     //TODO
     // try to use bipart bfs to do courses
@@ -583,7 +589,7 @@ public class LeetCodeDFS {
         visited[person] = group;
         for(int nei : map.get(person)) {
             if(visited[nei] == group) { // nei cannot be same group with current person
-                return false; // two displike people on same group -> person and nei
+                return false; // two dislike people on same group -> person and nei
             }
             if(visited[nei] == 0 && !dfsBipart(map, visited, nei, -group)) { //-group pass to next person
                 return false;
